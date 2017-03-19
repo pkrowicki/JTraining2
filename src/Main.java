@@ -1,6 +1,19 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+
+        Dimensions dimensions = new Dimensions(20,20,5);
+        Case theCase = new Case("WhiteWizard", "LG", "DarkWater", dimensions);
+
+        Monitor monitor = new Monitor("ClearDisplay", "Eizo", 27, new Resolution(1920, 1080));
+
+        Motherboard motherboard = new Motherboard("Asus", "Asus", 3, 6, "v2.57");
+
+        PC thePC = new PC(theCase,monitor,motherboard);
+        thePC.getMonitor().drawPixelAt(100,120,"Red");
+        thePC.getMotherboard().loadProgram("Paint2_0");
+        thePC.getTheCase().PressPowerButton();
+
     }
 }
