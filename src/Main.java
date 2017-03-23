@@ -23,5 +23,17 @@ public class Main {
             System.out.println(intArray.get(i).intValue());
         }
 
+        Integer myIntV = 56; // Auto complete by Java to Integer.valueOf(56);
+        int mySecondIng = myIntV;  // Again auto completed by Java, myIntV.intValue();
+
+        ArrayList<Double> dblArr =new ArrayList<Double>();
+        for(double dbl=0d;dbl<=10d;dbl+=0.5){
+            dblArr.add(Double.valueOf(dbl));
+        }
+
+        for(int i = 0; i<dblArr.size();i++){
+            double value = dblArr.get(i).doubleValue();
+            System.out.println((i+1)+ " -> " + value);
+        }
     }
 }
